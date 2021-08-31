@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+
+    "name": "Focal",
+    "description": "Activate Your Focused Side In A Second!",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "logo.png",
+        "default_popup": "./page/index.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "storage"
+    ]
+}

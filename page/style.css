@@ -212,3 +212,83 @@ input {
     transition: 100ms ease-in-out;
     color: #5271FF !important;
 }
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.mainbtn {
+    background-color: #5271FF;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 75px;
+    height: 30px;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.mainbtn:hover {
+    background-color: #5978ff;
+    transition: 100ms ease-in-out;
+}
+
+select {
+    background-color: #222;
+    border: none;
+    color: gray;
+    border-radius: 8px;
+    padding: 6px;
+    outline: none;
+}
+
+option {
+    background-color: #222;
+    border-radius: 3px;
+    border: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+@keyframes timerspin {
+    from {
+        transform: translateY(600px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.timer {
+    position: absolute;
+    width: 100%;
+    bottom: 80px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 80;
+    margin: auto;
+    background-color: #111;
+    left: 0;
+    right: 0;
+    animation: timerspin 0.5s;
+}
+
+.timer .time-large {
+    font-size: 60px;
+}
+
+.time-larges {
+    display: flex;
+    align-items: center;
+    /* justify-content: spa; */
+}

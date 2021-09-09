@@ -156,7 +156,7 @@ const runTimer = (time) => {
     
     var countDownDate = new Date(statement2).getTime();
 
-    timer.style.display = "flex";
+    timer.style.display = "none";
 
     setInterval(() => {
         var now = new Date().getTime();
@@ -167,9 +167,6 @@ const runTimer = (time) => {
         var seconds2 = Math.floor((distance % (1000 * 60)) / 1000);
 
         console.log(hour2, minutes2, seconds2);
-        // hour.textContent = `${hour2}:`;
-        // minutes.textContent = `${minutes2}:`;
-        // seconds.textContent = seconds2;
         timeLarge.textContent = `${hour2}:${minutes2}:${seconds2}`;
         chrome.storage.sync.set( { timer: `${hour2}:${minutes2}:${seconds2}` } );
         chrome.storage.sync.set( { dist: distance } );
